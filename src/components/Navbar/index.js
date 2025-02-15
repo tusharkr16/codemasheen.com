@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Red_Hat_Text } from "next/font/google";
 import { Menu, X } from "lucide-react"; // Import hamburger and close icons
-import logo from "../../assets/logo.png"
+import logo from "../../../public/CODEMASHEENLOGOfooter.svg"
 import Image from "next/image";
 
 // Import fonts from Google using next/font
@@ -60,13 +60,13 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-center">
-        {/* Logo */}
+        
         <Link href="/" className="text-[#3867D6] text-[24px] leading-[21px] tracking-[3.48px]">
         <Image
                     alt="planet"
                     src={logo}
-                    width={190}
-                    height={190}
+                    width={180}
+                    height={120}
                     sizes="10vw"
                   
                   />
