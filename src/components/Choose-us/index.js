@@ -1,19 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 import codeImg from "../../assets/language.png"
+import { IconCloudDemo } from '../techstack'
 
 const Choose = () => {
     return (
         <div className='flex flex-col lg:flex-row mt-2 '>
             <div className='lg:w-1/2 lg:min-h-[50vh] lg:h-screen flex flex-col items-center justify-center'>
-                <Image
-                    alt="planet"
-                    src={codeImg}
-                    width={740}
-                    height={740}
-                    sizes="50vw"
-
-                />
+                
+                <IconCloudDemo/>
             </div>
             <div className='lg:w-1/2 lg:min-h-[70vh] lg:h-screen flex items-center justify-center flex-col mb-5'>
                 <h1 className='font-redhat text-[2rem]  lg:text-[4rem] font-black drop-shadow-lg py-2'> We Design </h1> 

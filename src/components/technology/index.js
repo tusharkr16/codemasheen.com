@@ -46,10 +46,10 @@ const cloud = [
     { name: 'Git', src: git },
 ]
 
-const cms = [
-    { name: 'Shopify', src: shopifyy },
-    { name: 'Wordpress', src: wordpress },
-]
+// const cms = [
+//     { name: 'Shopify', src: shopifyy },
+//     { name: 'Wordpress', src: wordpress },
+// ]
 
 const Technology = () => {
     return (
@@ -63,7 +63,7 @@ const Technology = () => {
                 <Skill developers={appData} name='Mobile App Developers' />
                 <Skill developers={frontendData} name='Frontend Developers' />
                 <Skill  developers={backendData} name='Backend Developers'/>
-                <Skill  developers={cms} name='CMS  Developers'/>
+                {/* <Skill  developers={cms} name='CMS  Developers'/> */}
                 <Skill  developers={cloud} name=' Deveops Developers'/>
             </div>
 

@@ -33,7 +33,7 @@ const Card = () => {
   return (
     <>
     <div className='text-center'>
-      <p className='hidden  md:block text-blue-600 text-2xl font-semibold font-redhat'>Features</p>
+      <p className='hidden  md:block text-blue-500 text-2xl font-semibold font-redhat'>Features</p>
       <h1 className=' hidden md:block text-4xl font-redhat  text-bold py-2 font-black drop-shadow-lg'>Transforming Ideas Into Impactful User Experience</h1>
     </div>
     <div className="flex flex-col items-center justify-center md:flex-row gap-6 px-2 md:px-12 md:gap-x-9 py-10">

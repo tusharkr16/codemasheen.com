@@ -32,25 +32,25 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-3">Quick Links</h3>
             <ul className="space-y-2 text-black">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/About">About Us</a></li>
               <li><a href="#">Customer Success Stories</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms Of Use</a></li>
+              <li><a href="/Services">Services</a></li>
+              <li><a href="/Contact">Contact</a></li>
+              {/* <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms Of Use</a></li> */}
             </ul>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-3">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-3">We Provide </h3>
             <ul className="space-y-2 text-black">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Customer Success Stories</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms Of Use</a></li>
+              <li><a href="#">Frontend Development</a></li>
+              <li><a href="#">UI/UX Design</a></li>
+              <li><a href="#">Backend Services</a></li>
+              <li><a href="#">App services</a></li>
+              <li><a href="#">Microservices</a></li>
+              <li><a href="#">Consultation</a></li>
+              <li><a href="#">Clous Services</a></li>
             </ul>
           </div>
           <div>
@@ -70,14 +70,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Icons & CTA */}
+        
         <div className="flex flex-col md:flex-row justify-between items-center mt-10 border-t border-gray-700 pt-6">
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <Linkedin className="w-6 h-6 text-black hover:text-black" />
             <Instagram className="w-6 h-6 text-black hover:text-black" />
             <Facebook className="w-6 h-6 text-black hover:text-black" />
             <X className="w-6 h-6 text-black hover:text-black" />
-          </div>
+          </div> */}
 
           <button className="bg-blue-600 text-white px-6 py-2 rounded-lg mt-4 md:mt-0">
             Schedule a Meeting
@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-center text-black text-sm mt-6">
-          Copyright © 2025 Unico Connect Private Limited. All rights reserved.
+          Copyright © 2025 CodeMasheen. All rights reserved.
         </p>
       </div>
     </footer>

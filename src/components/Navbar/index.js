@@ -3,20 +3,20 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Red_Hat_Text } from "next/font/google";
-import { Menu, X } from "lucide-react"; // Import hamburger and close icons
+import { Menu, X } from "lucide-react"; 
 import logo from "../../../public/CODEMASHEENLOGOfooter.svg"
 import Image from "next/image";
 
-// Import fonts from Google using next/font
+
 const redHatText = Red_Hat_Text({ subsets: ["latin"], weight: "500" });
 
 const links = [
-  { label: "About", path: "/about" },
-  { label: "Services", path: "/services" },
-  { label: "Consultation", path: "/consult" },
-  { label: "Hire Developers", path: "/hire-developers" },
-  { label: "Contact", path: "/contact" },
-  { label: "Map", path: "/contact" },
+  { label: "Home", path: "/" },
+  { label: "About", path: "/About" },
+  { label: "Services", path: "/Services" },
+  { label: "Consultation", path: "/Consultation" },
+  // { label: "Hire Developers", path: "/hire-developers" },
+  { label: "Contact", path: "/Contact" },
 ];
 
 const Navbar = () => {
