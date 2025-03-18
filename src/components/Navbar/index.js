@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { Red_Hat_Text } from "next/font/google";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 import logo from "../../../public/CODEMASHEENLOGOfooter.svg"
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ const links = [
   { label: "Home", path: "/" },
   { label: "About", path: "/About" },
   { label: "Services", path: "/Services" },
-  { label: "Consultation", path: "/Consultation" },
+  // { label: "Consultation", path: "/Consultation" },
   // { label: "Hire Developers", path: "/hire-developers" },
   { label: "Contact", path: "/Contact" },
 ];
@@ -55,21 +55,20 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 w-full px-5 lg:w-[90%] lg:mx-auto z-10  transition-all duration-300 ${
-        scrolled ? "mt-0 min-w-[100%] backdrop-blur-2xl" : "bg-transparent "
-      }`}
+      className={`sticky top-0 w-full px-5 lg:w-[90%] lg:mx-auto z-50  transition-all duration-300 ${scrolled ? "mt-0 min-w-[100%] backdrop-blur-2xl" : "bg-transparent "
+        }`}
     >
       <div className="flex justify-between items-center">
-        
+
         <Link href="/" className="text-[#3867D6] text-[24px] leading-[21px] tracking-[3.48px]">
-        <Image
-                    alt="planet"
-                    src={logo}
-                    width={180}
-                    height={120}
-                    sizes="10vw"
-                  
-                  />
+          <Image
+            alt="planet"
+            src={logo}
+            width={180}
+            height={120}
+            sizes="10vw"
+
+          />
         </Link>
 
         {/* Desktop Navbar */}
@@ -94,9 +93,8 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out lg:hidden`}
+        className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-lg transform ${menuOpen ? "translate-x-0 z-50" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         {/* Close Button */}
         <button className="absolute top-5 right-5 text-gray-700" onClick={() => setMenuOpen(false)}>
