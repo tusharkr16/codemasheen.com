@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <div className='flex flex-col lg:flex-row mt-2 lg:mt-6'>
      
-      <div className='lg:w-1/2 lg:min-h-[80vh] lg:h-screen flex items-center justify-center flex-col order-2 lg:order-1'>
+      <div className='lg:w-1/2 mt-8 lg:mt-1 lg:min-h-[80vh] lg:h-screen flex items-center justify-center flex-col order-2 lg:order-1'>
         <h1 className='font-redhat text-[6rem]  lg:text-[9rem] font-black drop-shadow-lg '>we build</h1>
         <h1 className='font-redhat text-blue-600 -mt-16 lg:-mt-32 text-[6rem] lg:text-[9rem] font-black drop-shadow-lg'>stuff</h1>
         <p className='text-gray-600 mt-2 text-md max-w-lg text-center mx-2'>
@@ -42,7 +42,7 @@ const Hero = () => {
       </div>
 
       
-      <div className='lg:w-1/2 lg:min-h-[80vh] lg:h-screen flex flex-col items-center justify-center order-1 lg:order-2'>
+      <div className='lg:w-1/2 lg:min-h-[80vh] hidden lg:block lg:h-screen flex flex-col items-center justify-center order-1 lg:order-2'>
         <div className='flex mt-4 lg:mt-24 '>
           <Image
             alt="planet"
