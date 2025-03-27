@@ -9,17 +9,58 @@ export default function ContactForm() {
         fullName: '',
         email: '',
         mobile: '',
-        country: '',
+      
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+        
+        try {
+            const payload = {
+                name: formData.fullName,
+                email: formData.email,
+                mobile: formData.mobile,
+               
+                message: formData.message
+            };
+
+            const response = await fetch('https://cm-s0hj.onrender.com/v1/query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                console.log('Network response was not ok');
+            }
+
+            const data = await response.json();
+            console.log('Success:', data);
+            setSubmitStatus({ success: true, message: 'Message sent successfully!' });
+            setFormData({
+                fullName: '',
+                email: '',
+                mobile: '',
+                
+                message: ''
+            });
+        } catch (error) {
+            console.log('Error:', error);
+            setSubmitStatus({ success: false, message: 'Failed to send message. Please try again.' });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -28,6 +69,11 @@ export default function ContactForm() {
             <div className="flex flex-col md:flex-row">
                 {/* Form Section */}
                 <div className="bg-white shadow-md p-6 rounded-lg w-full md:w-1/2">
+                {submitStatus !== null && (
+                        <div className={`mb-4 p-3 rounded ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                            {submitStatus.message}
+                        </div>
+                    )}
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium">Full Name</label>
@@ -52,18 +98,8 @@ export default function ContactForm() {
                             />
                         </div>
                         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
-                            <div className="w-full md:w-1/3">
-                                <label className="block text-sm font-medium">Country</label>
-                                <input
-                                    type="text"
-                                    name="country"
-                                    value={formData.country}
-                                    onChange={handleChange}
-                                    className="w-full border rounded p-2 outline-blue-500"
-                                    placeholder="Country"
-                                />
-                            </div>
-                            <div className="w-full md:w-2/3">
+                           
+                            <div className="w-full ">
                                 <label className="block text-sm font-medium">Mobile</label>
                                 <input
                                     type="text"
@@ -86,7 +122,9 @@ export default function ContactForm() {
                                 rows="4"
                             ></textarea>
                         </div>
-                        <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">SUBMIT</button>
+                        <button onClick={handleSubmit} className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+                         disabled={isSubmitting}>
+                            {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}</button>
                     </form>
                 </div>
 
@@ -94,9 +132,9 @@ export default function ContactForm() {
                 <div className="mt-6 md:mt-0 md:ml-8 w-full md:w-1/2">
                     <h2 className="text-xl font-semibold">Email Us</h2>
                     <p className="text-gray-600">For Projects, Partnerships And Collaboration Opportunities</p>
-                    <p className="text-blue-600 font-semibold">sales@xyz.com</p>
+                    <p className="text-blue-600 font-semibold">info@codemasheen.com</p>
                     <p className="mt-4 text-gray-600">For Career Opportunities</p>
-                    <p className="text-blue-600 font-semibold">Career@xyz.com</p>
+                    <p className="text-blue-600 font-semibold">info@codemasheen.com</p>
 
                     <h2 className="mt-6 text-xl font-semibold">Our Office</h2>
 
@@ -114,10 +152,9 @@ export default function ContactForm() {
                     </div>
 
                     <h3 className="mt-4 font-semibold">India Office</h3>
-                    <p className="text-gray-600">511, A Wing, Kohinoor City Commercial 1, Kurla West, Mumbai, Maharashtra - 400070</p>
+                    <p className="text-gray-600">Dilshad Garden , Delhi - 110095</p>
 
-                    <h3 className="mt-4 font-semibold">US Office</h3>
-                    <p className="text-gray-600">2045 W Grand Ave Ste B, PMB 46737, Chicago, Illinois 60612-1577 US</p>
+                    
                 </div>
             </div>
         </div>

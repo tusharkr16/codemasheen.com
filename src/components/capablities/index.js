@@ -29,7 +29,7 @@ const features = [
   {
     icon: <Handshake className="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform" />,
     title: "Reliable Partnership",
-    description: "Unico Connect Solutions offers steadfast, responsive support you can depend on, every time.",
+    description: "Code Masheen Connect Solutions offers steadfast, responsive support you can depend on, every time.",
   },
 ];
 

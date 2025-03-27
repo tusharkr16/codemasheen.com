@@ -17,6 +17,11 @@ import git from "../../../public/git.svg"
 import aws from "../../../public/aws.svg"
 import azure from "../../../public/azure.svg"
 import kubernets from "../../../public/kubernetes.svg"
+import google from "../../../public/Google.jpg"
+import meta from "../../../public/meta.jpg"
+import GMD from "../../../public/GMB.jpg"
+import SEO from "../../../public/SEO.jpg"
+import leads from "../../../public/leads.jpg"
 
 const appData = [
     { name: 'Android', src: android },
@@ -46,6 +51,15 @@ const cloud = [
     { name: 'Git', src: git },
 ]
 
+const Marketing = [
+    { name: 'Google Ads', src: google },
+    { name: 'Meta Ads', src: meta },
+    { name: 'GMB', src: GMD },
+    { name: 'SEO', src: SEO },
+    { name: 'Leads', src: leads }
+   
+]
+
 // const cms = [
 //     { name: 'Shopify', src: shopifyy },
 //     { name: 'Wordpress', src: wordpress },
@@ -64,7 +78,8 @@ const Technology = () => {
                 <Skill developers={frontendData} name='Frontend Developers' />
                 <Skill  developers={backendData} name='Backend Developers'/>
                 {/* <Skill  developers={cms} name='CMS  Developers'/> */}
-                <Skill  developers={cloud} name=' Deveops Developers'/>
+                <Skill developers={cloud} name=' Devops Developers' />
+                {/* <Skill developers={Marketing} name='Marketing Developer' /> */}
             </div>
 
         </div>

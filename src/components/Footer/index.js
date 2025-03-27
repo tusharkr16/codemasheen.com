@@ -50,7 +50,7 @@ const Footer = () => {
               <li><a href="#">App services</a></li>
               <li><a href="#">Microservices</a></li>
               <li><a href="#">Consultation</a></li>
-              <li><a href="#">Clous Services</a></li>
+              <li><a href="#">Cloud Services</a></li>
             </ul>
           </div>
           <div>

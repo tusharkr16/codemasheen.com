@@ -15,6 +15,7 @@ const links = [
   { label: "About", path: "/About" },
   { label: "Services", path: "/Services" },
   // { label: "Consultation", path: "/Consultation" },
+  // { label: "Consultation", path: "/Consultation" },
   // { label: "Hire Developers", path: "/hire-developers" },
   { label: "Contact", path: "/Contact" },
 ];
@@ -93,8 +94,9 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-lg transform ${menuOpen ? "translate-x-0 z-50" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out lg:hidden`}
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out lg:hidden`}
       >
         {/* Close Button */}
         <button className="absolute top-5 right-5 text-gray-700" onClick={() => setMenuOpen(false)}>
