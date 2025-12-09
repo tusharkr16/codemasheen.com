@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="text-center text-black text-sm mt-6">
-          Copyright © 2025 CodeMasheen. All rights reserved.
+          Copyright © 2025 KOZIO MASHEEN PRIVATE LIMITED. All rights reserved.
         </p>
       </div>
     </footer>
@@ -94,3 +94,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
